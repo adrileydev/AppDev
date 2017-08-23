@@ -3,16 +3,9 @@
 </h1>
 <br>
 
- <div class="collection">
-   <a class="collection-item" *ngFor="let c of cursos" [routerLink]="['curso', cursos.id]">{{c.Descricao}}</a>
-
-      </div>
-
-
-
-
-
-
-  <hr>
-    <b> TOTAL : </b>{{cursos.length}}
-
+<div class="collection">
+  <a class="collection-item" *ngFor="let c of cursos"
+       [routerLink]="['curso',cursos.id]"> {{c.Descricao}}</a>
+</div>
+<hr>
+<b> TOTAL : </b>{{cursos.length}}

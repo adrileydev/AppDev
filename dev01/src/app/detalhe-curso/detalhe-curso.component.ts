@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetalheCursoComponent implements OnInit {
 
+  id: number;
   constructor() { }
 
   ngOnInit() {
