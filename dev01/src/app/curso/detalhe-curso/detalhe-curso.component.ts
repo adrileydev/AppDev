@@ -1,7 +1,9 @@
 import { Subscription } from 'rxjs/Rx';
-import { routing } from './../rota';
+
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ServicoCursoService } from '../../servicos/servico-curso.service';
+
 
 @Component({
   selector: 'app-detalhe-curso',
@@ -11,8 +13,11 @@ import { ActivatedRoute } from '@angular/router';
 export class DetalheCursoComponent implements OnInit {
 
   id: number;
+  curso: any;
   inscricao: Subscription;
-  constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute,
+             private servicoCursoService: ServicoCursoService,
+             private router: Router ) {
 
   }
 
@@ -20,6 +25,11 @@ export class DetalheCursoComponent implements OnInit {
     this.inscricao =  this.route.params.subscribe(
       (params: any) => {
     this.id = params['id'];
+    this.curso = this.servicoCursoService.getCurso(this.id = params['id']);
+
+     if(this.curso == null){
+        this.router.navigate(['/erro']);
+     }
     });
   }
   // tslint:disable-next-line:use-life-cycle-interface

@@ -18,4 +18,16 @@ export class ServicoCursoService {
     ];
     return this.cursos;
   }
+
+  getCurso(id: number){
+    let cursos = this.getCursos();
+    for(let i = 0; i < cursos.length; i ++ ){
+      let curso = cursos[i];
+      if(curso.Id == id){
+        return curso;
+      }
+     }
+    return null;
+
+  }
 }

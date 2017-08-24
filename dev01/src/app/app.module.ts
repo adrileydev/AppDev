@@ -5,11 +5,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { CursoComponent } from './curso/curso.component';
 import { LoginComponent } from './login/login.component';
-import { HeaderComponent } from './header/header/header.component';
+import { HeaderComponent } from './header/header.component';
 import { ServicoCursoService } from './servicos/servico-curso.service';
-import { AppRoutingModule } from "./app.routing.module";
-import { DetalheCursoComponent } from './detalhe-curso/detalhe-curso.component';
-//import { routing } from './rota';
+import { AppRoutingModule } from './app.routing.module';
+import { DetalheCursoComponent } from './curso/detalhe-curso/detalhe-curso.component';
+import { ErrosComponent } from './curso/erros/erros.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,8 @@ import { DetalheCursoComponent } from './detalhe-curso/detalhe-curso.component';
     CursoComponent,
     LoginComponent,
     HeaderComponent,
-    DetalheCursoComponent
+    DetalheCursoComponent,
+    ErrosComponent
   ],
   imports: [
     BrowserModule,

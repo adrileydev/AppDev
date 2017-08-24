@@ -2,10 +2,10 @@
   Lista de Cursos
 </h1>
 <br>
-
+<p>Página:{{pagina}} </p>
 <div class="collection">
   <a class="collection-item" *ngFor="let curso of cursos"
-       [routerLink]="['/curso',curso.Id]"> {{curso.Descricao}}</a>
+       [routerLink]="['/curso',curso.Id]" alt> {{curso.Descricao}}</a>
 </div>
 <hr>
 <b> TOTAL : </b>{{cursos.length}}
