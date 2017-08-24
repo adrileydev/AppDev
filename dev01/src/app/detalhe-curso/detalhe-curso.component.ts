@@ -1,3 +1,5 @@
+import { Subscription } from 'rxjs/Rx';
+import { routing } from './../rota';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -9,11 +11,21 @@ import { ActivatedRoute } from '@angular/router';
 export class DetalheCursoComponent implements OnInit {
 
   id: number;
+  inscricao: Subscription;
   constructor(private route: ActivatedRoute) {
-    console.log( this.id =  this.route.snapshot.params['id']);
+
   }
 
   ngOnInit() {
+    this.inscricao =  this.route.params.subscribe(
+      (params: any) => {
+    this.id = params['id'];
+    });
+  }
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngOnDestroy() {
+    this.inscricao.unsubscribe();
+
   }
 
 }

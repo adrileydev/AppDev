@@ -8,14 +8,14 @@ import { ModuleWithProviders } from '@angular/core';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent },
-  {path: 'curso', component: CursoComponent },
-  {path: 'cursos/:id', component: DetalheCursoComponent },
+  {path: 'cursos', component: CursoComponent },
+  {path: 'curso/:id', component: DetalheCursoComponent },
   {path: '', component: HomeComponent }
 ];
 
 
 @NgModule({
-  imports:[ RouterModule.forRoot(appRoutes)],
-  exports:[RouterModule]
+  imports: [RouterModule.forRoot(appRoutes)],
+  exports: [RouterModule]
 })
 export  class AppRoutingModule{}
