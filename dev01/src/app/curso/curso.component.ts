@@ -7,21 +7,13 @@ import { ServicoCursoService } from '../servicos/servico-curso.service';
 
 @Component({
   selector: 'app-curso',
-  templateUrl: './curso.component.html',
-  styleUrls: ['./curso.component.css']
+  templateUrl: './curso.component.html'
 })
 export class CursoComponent implements OnInit {
-
   pagina: number;
   cursos: any[];
   inscricao: Subscription;
-
-  Empresa: Config;
-  em: string;
-  v: string;
-
   constructor(private servicoCursoService: ServicoCursoService, private route: ActivatedRoute ) { }
-
   ngOnInit() {
    this.cursos = this.servicoCursoService.getCursos();
     this.inscricao = this.route.queryParams.subscribe(
@@ -29,13 +21,9 @@ export class CursoComponent implements OnInit {
         this.pagina = queryParam['pagina'];
       }
     );
-
-
-
   }
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
         this.inscricao.unsubscribe();
   }
-
 }
