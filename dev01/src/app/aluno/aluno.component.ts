@@ -1,4 +1,6 @@
+import { AlunoServicesService } from './aluno-services.service';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-aluno',
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./aluno.component.css']
 })
 export class AlunoComponent implements OnInit {
-
-  constructor() { }
+  alunos: any[]= [];
+  constructor(private alunoServicesService: AlunoServicesService) { }
 
   ngOnInit() {
+    this.alunos = this.alunoServicesService.getAlunos();
   }
+
 
 }

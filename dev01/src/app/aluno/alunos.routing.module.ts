@@ -13,6 +13,6 @@ const AlunosRotas = [
 ];
 @NgModule({
    imports: [RouterModule.forChild(AlunosRotas)],
-   exports: []
+   exports: [RouterModule]
 })
 export class AlunosRoutingModule {}

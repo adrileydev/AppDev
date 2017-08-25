@@ -10,6 +10,7 @@ import { ServicoCursoService } from './servicos/servico-curso.service';
 import { AppRoutingModule } from './app.routing.module';
 import { CursosModule } from './curso/cursos.module';
 import { AlunosModule } from './aluno/alunos.module';
+import { AlunoServicesService } from './aluno/aluno-services.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { AlunosModule } from './aluno/alunos.module';
     AlunosModule,
     AppRoutingModule
   ],
-  providers: [ServicoCursoService],
+  providers: [ServicoCursoService,AlunoServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
