@@ -8,11 +8,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent },
-  {path: 'cursos', component: CursoComponent },
+  {path: 'login', component: LoginComponent }
+ /* {path: 'cursos', component: CursoComponent },
   {path: 'curso/:id', component: DetalheCursoComponent },
   {path: '', component: HomeComponent },
-  {path: 'erro', component: ErrosComponent}
+  {path: 'erro', component: ErrosComponent}*/
 ];
 
 
