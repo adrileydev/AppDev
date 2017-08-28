@@ -1,3 +1,24 @@
 <p>
   Formulário de Cadastro
 </p>
+<div class="col s12">
+  <div class="row">
+  <div class= "input-field col s12">
+    <input   id="disabled" type="text">
+    <label for="disabled">#</label>
+  </div>
+  </div>
+<div class="row">
+  <div class= "input-field col s12">
+    <input id="Nome"[(ngModel)]= "aluno.Nome" class="validate" type="text">
+    <label for="Nome" class="active">Nome</label>
+  </div>
+  </div>
+<div class="row">
+  <div class= "input-field col s12">
+    <input id="Email"[(ngModel)]="aluno.Email" class="validate" type="text">
+    <label for="Email" class="active">Email</label>
+  </div>
+  </div>
+
+</div>
