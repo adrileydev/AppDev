@@ -8,10 +8,10 @@ export class AlunoServicesService {
   constructor() { }
   getAlunos() {
     this.alunos = [
-      new Aluno(1, 'Adriley',   'adriey@terra.com', 'A'),
-      new Aluno(2, 'Ana luiza', 'Ana@terra.com', 'A'),
-      new Aluno(3, 'Patricia',  'Patricia@terra.com', 'B'),
-      new Aluno(4, 'Victor ',    'Victor@terra.com','C')
+      new Aluno(1, 'Adriley',   'adriey@terra.com', 'A', true),
+      new Aluno(2, 'Ana luiza', 'Ana@terra.com', 'A', true),
+      new Aluno(3, 'Patricia',  'Patricia@terra.com', 'B', false),
+      new Aluno(4, 'Victor ',    'Victor@terra.com','C',false)
     ];
     return this.alunos;
   }

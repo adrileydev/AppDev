@@ -1,10 +1,12 @@
 <h1>
  Detalhes dos Cursos
 </h1>
-<hr>
 
- <br>
- {{curso.Nome}}
- <br>
- {{curso.Descricao}}
+  <ul class="collection with-header">
+      <li class="collection-item"> <b>Código:</b> {{curso.Id}}</li>
+      <li class="collection-item"> <b>Descriçao </b> {{curso.Descricao | uppercase}}</li>
+       <li class="collection-item">  <a class="btn btn default" >Editar</a></li>
+
+    </ul>
+
 

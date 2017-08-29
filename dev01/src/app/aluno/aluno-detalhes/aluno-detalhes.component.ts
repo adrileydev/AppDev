@@ -1,7 +1,8 @@
 import { AlunoServicesService } from './../aluno-services.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-aluno-detalhes',
@@ -13,8 +14,8 @@ export class AlunoDetalhesComponent implements OnInit {
    inscricao: Subscription;
 
   constructor( private route: ActivatedRoute,
+               private router: Router,
                private alunoServicesService: AlunoServicesService ) {
-
    }
 
   ngOnInit() {
@@ -22,10 +23,16 @@ export class AlunoDetalhesComponent implements OnInit {
       (params: any) => {
         let id = params['id'];
         this.aluno = this.alunoServicesService.getAluno(id);
+        if (this.aluno === null) {
+          this.aluno = { }
+        }
       }
     );
   }
+  editarAluno() {
+    this.router.navigate(['/alunos', this.aluno.id, 'editar']);
 
+  }
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
    this.inscricao.unsubscribe();

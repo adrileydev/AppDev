@@ -3,10 +3,14 @@
 </h3>
 
 
-
 <ul class="collection with-header">
     <li class="collection-item"> <b>Nome:</b> {{aluno.Nome|uppercase}}</li>
     <li class="collection-item"> <b>E-Mail</b> {{aluno.Email}}</li>
      <li class="collection-item"><b>Turma</b> {{aluno.Turma}}</li>
+     <li class="collection-item"><b>Ativo</b> {{aluno.Active ? 'Ativo' : 'Desativado'}}</li>
+     <li class="collection-item">  <a class="btn btn default" (click)="editarAluno()">Editar</a></li>
+
+
+
   </ul>
 

@@ -16,21 +16,19 @@ export class DetalheCursoComponent implements OnInit {
   curso: any;
   inscricao: Subscription;
   constructor(private route: ActivatedRoute,
-             private servicoCursoService: ServicoCursoService,
-             private router: Router ) {
-
+    private servicoCursoService: ServicoCursoService,
+    private router: Router) {
   }
-
   ngOnInit() {
-    this.inscricao =  this.route.params.subscribe(
+    this.inscricao = this.route.params.subscribe(
       (params: any) => {
-    this.id = params['id'];
-    this.curso = this.servicoCursoService.getCurso(this.id = params['id']);
+        this.id = params['id'];
+        this.curso = this.servicoCursoService.getCurso(this.id = params['id']);
 
-     if (this.curso == null){
-        this.router.navigate(['/erro']);
-     }
-    });
+        if (this.curso == null) {
+          this.router.navigate(['/erro']);
+        }
+      });
   }
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
