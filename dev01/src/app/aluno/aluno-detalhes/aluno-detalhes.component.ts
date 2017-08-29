@@ -30,8 +30,9 @@ export class AlunoDetalhesComponent implements OnInit {
     );
   }
   editarAluno() {
-    this.router.navigate(['/alunos', this.aluno.id, 'editar']);  }
+    this.router.navigate(['/alunos', this.aluno.id, 'editar']);
 
+  }
   // tslint:disable-next-line:use-life-cycle-interface
   ngOnDestroy() {
    this.inscricao.unsubscribe();

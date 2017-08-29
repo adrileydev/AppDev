@@ -7,11 +7,12 @@ import { NgModule, Component } from '@angular/core';
 import { DetalheCursoComponent } from './detalhe-curso/detalhe-curso.component';
 import { ErrosComponent } from './erros/erros.component';
 const cursosRouting = [
-  {path: 'cursos', component: CursoComponent},
-  {path: 'curso/:id', component: DetalheCursoComponent },
-  {path: 'curso/:id/editar', component: CursoformComponent },
+  {path: 'cursos', component: CursoComponent, children: [
+  {path: ':id', component: DetalheCursoComponent },
+  {path: ':id/Editar', component: CursoformComponent },
   {path: 'erro', component: ErrosComponent}
-  ];
+  ]}
+];
 @NgModule({
    imports: [RouterModule.forChild(cursosRouting)],
    exports: [RouterModule]

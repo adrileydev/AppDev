@@ -16,7 +16,7 @@
   </div>
   <div class="row">
     <div class="input-field col s12">
-      <input id="Email" [(ngModel)]="aluno.Email" class="validate" type="text" #t >
+      <input id="Email" [(ngModel)]="aluno.Email" class="validate" type="text">
       <label for="Email" class="active">Email</label>
     </div>
     <div class="row">
@@ -24,4 +24,3 @@
         <input id="checkbox-active" type="checkbox" name="active" [(ngModel)]="aluno.Active">
         <label for="Email" class="active">Ativo</label>
       </div>
-<a class="btn btn default" (click)="GravarAluno(aluno)">Gravar</a>
