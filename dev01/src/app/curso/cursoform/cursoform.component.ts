@@ -1,9 +1,10 @@
+import { Usuario } from './../../Entidades/Usuario';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cursoform',
-  templateUrl: './cursoform.component.html',
-  styleUrls: ['./cursoform.component.css']
+  templateUrl: './cursoform.component.html'
+
 })
 export class CursoformComponent implements OnInit {
 
@@ -11,5 +12,6 @@ export class CursoformComponent implements OnInit {
 
   ngOnInit() {
   }
+
 
 }

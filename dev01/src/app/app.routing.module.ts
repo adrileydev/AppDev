@@ -14,8 +14,6 @@ const appRoutes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'erro', component: ErrosComponent}*/
 ];
-
-
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
   exports: [RouterModule]
