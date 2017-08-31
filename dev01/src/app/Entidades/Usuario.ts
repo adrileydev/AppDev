@@ -1,3 +1,6 @@
 export class Usuario {
-  constructor(public Nome: string, public Pass: string, public Ativo: boolean ){ }
+    public Nome: string;
+    public Pass: string;
+    public Ativo: boolean;
+    public Autenticado: boolean ;
 }

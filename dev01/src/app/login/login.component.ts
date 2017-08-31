@@ -1,3 +1,4 @@
+import { routing } from './../rota';
 import { Usuario } from './../Entidades/Usuario';
 import { Component, OnInit } from '@angular/core';
 import { LoginServiceService } from './login-service.service';
@@ -7,17 +8,12 @@ import { LoginServiceService } from './login-service.service';
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
-
-  private usuario = new Usuario('', '', true);
+   private usuario = new Usuario();
   constructor(private loginServiceService: LoginServiceService ) { }
-
-
   ngOnInit() {
-
   }
 
-  Logar(usuario) {
-    console.log(usuario);
+  logar_Click() {
+    this.loginServiceService.FazerLogin(this.usuario);
   }
-
 }

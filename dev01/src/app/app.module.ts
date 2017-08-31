@@ -12,6 +12,7 @@ import { CursosModule } from './curso/cursos.module';
 import { AlunosModule } from './aluno/alunos.module';
 import { AlunoServicesService } from './aluno/aluno-services.service';
 import { LoginServiceService } from './login/login-service.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { LoginServiceService } from './login/login-service.service';
     BrowserModule,
     CursosModule,
     AlunosModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ServicoCursoService, AlunoServicesService, LoginServiceService],
   bootstrap: [AppComponent]
