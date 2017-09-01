@@ -4,11 +4,12 @@ import { AlunoComponent } from './aluno.component';
 import { RouterModule } from '@angular/router';
 
 import { NgModule, Component } from '@angular/core';
+import { AuthGuard } from '../guards/auth-guard';
 const AlunosRotas = [
-       {path: 'alunos',     component : AlunoComponent, children: [
-       {path: 'novo',       component : AlunoFormComponent},
-       {path: ':id',        component : AlunoDetalhesComponent},
-       {path: ':id/editar', component : AlunoFormComponent}
+       {path: 'alunos',    canActivate: [AuthGuard], component : AlunoComponent, children: [
+       {path: 'novo',       canActivate: [AuthGuard], component : AlunoFormComponent},
+       {path: ':id',        canActivate: [AuthGuard], component : AlunoDetalhesComponent},
+       {path: ':id/editar', canActivate: [AuthGuard], component : AlunoFormComponent}
        ]}
 ];
 @NgModule({

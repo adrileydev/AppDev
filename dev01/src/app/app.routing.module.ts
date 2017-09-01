@@ -6,9 +6,12 @@ import { CursoComponent } from './curso/curso.component';
 import { LoginComponent } from './login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import { ModuleWithProviders } from '@angular/core';
+import { AuthGuard } from './guards/auth-guard';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent }
+  {path: 'login', component: LoginComponent },
+   {path: '', canActivate: [AuthGuard], component: HomeComponent }
+
  /* {path: 'cursos', component: CursoComponent },
   {path: 'curso/:id', component: DetalheCursoComponent },
   {path: '', component: HomeComponent },

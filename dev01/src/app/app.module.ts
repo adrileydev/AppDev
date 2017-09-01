@@ -13,6 +13,7 @@ import { AlunosModule } from './aluno/alunos.module';
 import { AlunoServicesService } from './aluno/aluno-services.service';
 import { LoginServiceService } from './login/login-service.service';
 import { FormsModule } from '@angular/forms';
+import { AuthGuard } from "./guards/auth-guard";
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [ServicoCursoService, AlunoServicesService, LoginServiceService],
+  providers: [ServicoCursoService, AlunoServicesService, LoginServiceService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
